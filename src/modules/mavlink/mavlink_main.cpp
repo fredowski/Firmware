@@ -2146,16 +2146,21 @@ Mavlink::task_main(int argc, char *argv[])
 		break;
 
 	case MAVLINK_MODE_MINIMAL:
-		configure_stream("ALTITUDE", 0.5f);
-		configure_stream("ATTITUDE", 10.0f);
-		configure_stream("EXTENDED_SYS_STATE", 0.1f);
-		configure_stream("GPS_RAW_INT", 0.5f);
-		configure_stream("GLOBAL_POSITION_INT", 5.0f);
-		configure_stream("HOME_POSITION", 0.1f);
-		configure_stream("NAMED_VALUE_FLOAT", 1.0f);
-		configure_stream("RC_CHANNELS", 0.5f);
-		configure_stream("SYS_STATUS", 0.1f);
-		configure_stream("VFR_HUD", 1.0f);
+		configure_stream("CAMERA_CAPTURE", 2.0f);
+        configure_stream("CAMERA_TRIGGER");
+        configure_stream("CAMERA_IMAGE_CAPTURED");
+		//configure_stream("ALTITUDE", 0.5f);
+		//configure_stream("ATTITUDE", 10.0f);
+		//configure_stream("EXTENDED_SYS_STATE", 0.1f);
+		//configure_stream("GPS_RAW_INT", 0.5f);
+        configure_stream("GPS_RAW_INT", 1.0f);
+		//configure_stream("GLOBAL_POSITION_INT", 5.0f);
+        configure_stream("GLOBAL_POSITION_INT", 1.0f);
+		//configure_stream("HOME_POSITION", 0.1f);
+		//configure_stream("NAMED_VALUE_FLOAT", 1.0f);
+		//configure_stream("RC_CHANNELS", 0.5f);
+		//configure_stream("SYS_STATUS", 0.1f);
+		//configure_stream("VFR_HUD", 1.0f);
 		break;
 
 	default:
